@@ -1,0 +1,51 @@
+.btn {
+    margin: 50px auto;
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 #888888;
+    display: inline-block;
+    padding: 15px 50px;
+    color: #333333;
+    width: 15em;
+    height: 10em;
+  }
+  .center {
+    text-align: center;
+  }
+  .ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  .ripple .rippleContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .ripple .rippleContainer span {
+    /* transform: scale(0); */
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* border-radius: 100%; */
+    position: absolute;
+    opacity: 0.25;
+    background-color: #5300e8;
+    animation: ripple 1000ms;
+    border-style: solid;
+  }
+  
+  @keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+  .block {
+      background-color: #333333;
+      width: 100%;
+      height: 2em;
+      margin-top: 0;
+  }
