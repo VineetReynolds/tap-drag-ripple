@@ -3,6 +3,11 @@ import React from 'react'
 import Ripple from '../../src/Ripple'
 
 describe('App', ()=> {
+
+    afterEach(function () {
+        cy.wait(500)
+      })
+
     it('mount ripple in cypress', () => {
         cy.mount(<Ripple><div className='button' style={{width:10 + 'em', height:10+'em', backgroundColor:'#666666'}}>Click me</div></Ripple>);
         let buttonCoords;
@@ -26,6 +31,8 @@ describe('App', ()=> {
             console.log($el[0].innerHTML);
             cy.get('#left').parent().click(buttonCoords.left + buttonCoords.width/2, buttonCoords.top + buttonCoords.height/2);
         });
+
+        cy.wait(500);
 
         const rightButton = cy.get('#right').then($el => {
             buttonCoords = $el[0].getBoundingClientRect();
