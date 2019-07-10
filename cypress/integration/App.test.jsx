@@ -8,7 +8,7 @@ describe('App', ()=> {
         cy.wait(500)
       })
 
-    it('mount ripple in cypress', () => {
+    it('ripple on single component', () => {
         cy.mount(<Ripple><div className='button' style={{width:10 + 'em', height:10+'em', backgroundColor:'#666666'}}>Click me</div></Ripple>);
         let buttonCoords;
         const button = cy.get('.button').then($el => {
@@ -20,7 +20,7 @@ describe('App', ()=> {
         });
     })
 
-    it('mount ripple in cypress', () => {
+    it('ripple on multiple components', () => {
         cy.mount(<Ripple>
             <div id='left' style={{width:10 + 'em', height:10+'em', backgroundColor:'#999999', float:'left'}}>Left</div>
             <div id='right' style={{width:10 + 'em', height:10+'em', backgroundColor:'#999999', float:'right'}}>Right</div>
