@@ -6,6 +6,5 @@
       "react-dom": "./node_modules/react-dom/umd/react-dom.development.js"
     }
   },
-  "videoCompression": 0,
-  "projectId": "ya7jo1"
+  "videoCompression": 0
 }
