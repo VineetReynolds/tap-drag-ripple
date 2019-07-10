@@ -16,6 +16,7 @@ describe('App', ()=> {
             console.log(buttonCoords);
             console.log($el[0].innerHTML);
             cy.get('.button').parent().click(buttonCoords.width/2, buttonCoords.height/2);
+            cy.screenshot();
         });
     })
 
@@ -30,6 +31,7 @@ describe('App', ()=> {
             console.log(buttonCoords);
             console.log($el[0].innerHTML);
             cy.get('#left').parent().click(buttonCoords.left + buttonCoords.width/2, buttonCoords.top + buttonCoords.height/2);
+            cy.screenshot();
         });
 
         cy.wait(500);
@@ -39,6 +41,7 @@ describe('App', ()=> {
             console.log(buttonCoords);
             console.log($el[0].innerHTML);
             cy.get('#right').parent().click(buttonCoords.left + buttonCoords.width/2, buttonCoords.top + buttonCoords.height/2);
+            cy.screenshot();
         });
     })
 })
